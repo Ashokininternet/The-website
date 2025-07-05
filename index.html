@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Enchanting the schools</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Add a mobile-friendly search bar and featured schools section -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>Enchanting the schools</h1>
+        </div>
+        <nav>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="listings.html">Listings</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Your Dream School Awaits</h2>
+                <p>Browse our Favorite schools to find your perfect matching school today!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Schools Section -->
+    <section class="featured-schools">
+        <h2>Featured Schools</h2>
+        <div class="schools-grid">
+            <!-- This will be populated by listing.js -->
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="quick-links">
+        <div class="links-container">
+            <div class="link-box">
+                <h3>Admissions</h3>
+                <p>Learn about admission processes</p>
+            </div>
+            <div class="link-box">
+                <h3>Programs</h3>
+                <p>Explore academic programs</p>
+            </div>
+            <div class="link-box">
+                <h3>Events</h3>
+                <p>Check upcoming school events</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p class="sub">&copy; 2025 Enchanting the schools. All rights reserved.</p>
+    </footer>
+   
+    <script type="module" src="scripts/renderUI/listing.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

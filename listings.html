@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Listings - Enchanting the schools</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>Enchanting the schools</h1>
+        </div>
+        <nav>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="listings.html" class="active">Listings</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="search-container">
+            <h2>Find Your Perfect School</h2>
+            <form action="#" method="GET" class="search-form">
+                <div class="search-wrapper">
+                    <input type="text" placeholder="Search for schools..." class="search-input" name="search">
+                    <button type="submit" class="search-btn">
+                        <span>Search</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Listings Section -->
+    <section id="listings" class="listings MainDisplayDiv">
+        <!-- Content will be populated by listing.js -->
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p class="sub">&copy; 2025 Enchanting the schools. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="scripts/renderUI/listing.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,781 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2{
+    color: #333;
+    font-family: Arial;
+}
+.sub{
+    color: #ddd;
+    font-family: Arial;
+}
+p{
+    color: #333;
+    font-family: Arial;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(135deg, #333, #333);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav{
+    background-color: #333;;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 25px;
+    background-color: #e8e8e8;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    display: inline-block;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+nav a:hover, nav a.active {
+    background-color: #ffffff;;
+    transform: scale(1.05);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav a.active {
+    background-color: #000000; 
+    color: white;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+main.content {
+    width: 90%;
+    max-width: 1200px;
+    padding: 30px;
+    background-color: white;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+nav ul li a {
+    color: #333;;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+/* Listings Section */
+.listings {
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.listing {
+    width: 30%;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.listing img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.listing .details {
+    padding: 15px;
+}
+
+.listing .details h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.listing .details p {
+    color: #666;
+    font-size: 18px;
+}
+
+.listing .details a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #1e90ff;
+}
+
+/* About Section */
+.about {
+    background-color: #f7f7f7;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact form input,
+.contact form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mobile-first Design (Default layout) */
+@media (max-width: 768px) {
+    .header,
+    .logo h1,
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .listings {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .listing {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .contact form input,
+    .contact form textarea {
+        width: 100%;
+    }
+}
+
+/* PC/Desktop Layout */
+@media (min-width: 769px) {
+    .listings {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .listing {
+        width: 30%;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+}
+
+/* Mobile menu styles */
+.nav-toggle {
+    display: none;
+}
+
+.mobile-menu-btn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        cursor: pointer;
+        padding: 8px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+    }
+
+    .mobile-menu-btn span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: white;
+        transition: 0.3s;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 60px;  /* Adjusted position */
+        left: 0;
+        background: rgba(51, 51, 51, 0.95);  /* Semi-transparent background */
+        padding: 15px;
+        flex-direction: column;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(5px);  /* Blur effect for background */
+        z-index: 1000;
+    }
+
+    .nav-links li {
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 5px 0;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.02);
+    }
+
+    .nav-toggle:checked ~ .nav-links {
+        display: flex;
+        animation: slideDown 0.3s ease-out;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.nav-toggle:checked ~ .nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    margin: 8px 0;
+}
+
+.nav-links a {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    padding: 8px 15px;
+}
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.mobile-menu-btn span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* Search container */
+.search-section {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.search-wrapper {
+    display: flex;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.search-input {
+    flex: 1;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+}
+
+.search-btn {
+    padding: 15px 30px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+    background: #444;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .search-wrapper {
+        flex-direction: column;
+        border-radius: 25px;
+        padding: 15px;
+    }
+
+    .search-input {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+}
+.search-btn {
+    padding: 12px 24px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Featured Schools */
+.featured-schools {
+    padding: 40px 20px;
+}
+
+.schools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Quick Links */
+.quick-links {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+}
+
+.links-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.link-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Footer styling */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    @media (max-width: 768px) {
+        nav {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 60px;
+        }
+    
+        .mobile-menu-btn {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 1001;
+        }
+    
+        .nav-links {
+            display: none;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: #333;
+            padding: 15px;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            max-height: calc(100vh - 60px);
+            overflow-y: auto;
+            z-index: 1000;
+        }
+    
+        .nav-links.active {
+            display: flex;
+        }
+    
+        .nav-links li {
+            width: 90%;
+            max-width: 300px;
+        }
+    
+        .nav-links a {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 2px 0;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .nav-toggle:checked ~ .nav-links {
+        display: flex;
+        animation: slideDown 0.3s ease-out;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.nav-toggle:checked ~ .nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    margin: 8px 0;
+}
+
+.nav-links a {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    padding: 8px 15px;
+}
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.mobile-menu-btn span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* Search container */
+.search-section {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.search-wrapper {
+    display: flex;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.search-input {
+    flex: 1;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+}
+
+.search-btn {
+    padding: 15px 30px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+    background: #444;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .search-wrapper {
+        flex-direction: column;
+        border-radius: 25px;
+        padding: 15px;
+    }
+
+    .search-input {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+}
+.search-btn {
+    padding: 12px 24px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Featured Schools */
+.featured-schools {
+    padding: 40px 20px;
+}
+
+.schools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Quick Links */
+.quick-links {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+}
+
+.links-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.link-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Footer styling */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #333;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}

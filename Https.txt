@@ -1,0 +1,12 @@
+Python:
+ python -m http.server 8000
+
+Node js:
+ npm install -g http-server
+ http-server
+
+Open location
+Python:
+  http://localhost:8000
+Node js:
+ http://localhost:8080
