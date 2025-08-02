@@ -31,11 +31,10 @@ ul {
 
 header {
     background: linear-gradient(135deg, #333, #333);
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
-    padding: 50px 20px;
+    padding: 30px 20px;
     width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header .logo h1 {
@@ -44,7 +43,7 @@ header .logo h1 {
 
 nav ul {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 

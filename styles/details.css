@@ -1,7 +1,6 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
     background-color: #f4f4f4;
 }
 
@@ -12,11 +11,12 @@ body {
 }
 
 .hero-image {
-    width: 100%;
+    width: 80%;
     max-height: 400px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 30px;
     margin-bottom: 20px;
+    padding: 20px;
 }
 
 .description {

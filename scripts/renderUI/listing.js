@@ -1,5 +1,9 @@
 import { mainData } from "../data/data.js";
 
+const searchForm = document.getElementById("search-form");
+const searchBox = document.getElementById("search-input");
+const searchResult = document.getElementById("search-result");
+const searchBtn = document.getElementById("search-btn");
 
 renderUi();
 
