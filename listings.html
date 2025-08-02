@@ -23,7 +23,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="listings.html" class="active">Listings</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <!-- <li><a href="contact.html">Contact</a></li> -->
             </ul>
         </nav>
     </header>
@@ -34,8 +34,8 @@
             <h2>Find Your Perfect School</h2>
             <form action="#" method="GET" class="search-form">
                 <div class="search-wrapper">
-                    <input type="text" placeholder="Search for schools..." class="search-input" name="search">
-                    <button type="submit" class="search-btn">
+                    <input type="text" placeholder="Search for schools..." class="search-input" name="search" id="search-input">
+                    <button type="submit" class="search-btn" id="search-btn">
                         <span>Search</span>
                     </button>
                 </div>
@@ -44,9 +44,11 @@
     </section>
 
     <!-- Listings Section -->
+     <div id="serach-result">
     <section id="listings" class="listings MainDisplayDiv">
         <!-- Content will be populated by listing.js -->
     </section>
+    </div>
 
     <!-- Footer Section -->
     <footer>
